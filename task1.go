@@ -10,7 +10,6 @@ import (
 	h "herd/models"
 )
 
-
 func main() {
 
 	var days int64
@@ -18,8 +17,6 @@ func main() {
 	var tillDateStock, milkStock, oldInAges float64
 	var skinStock, tillDateSkinStock int
 	var herds []string 
-
-
 
 	if len(os.Args) != 3 {
 		fmt.Println("Usage:", os.Args[0], "NumberOfDays", "fileName")
