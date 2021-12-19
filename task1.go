@@ -38,7 +38,7 @@ func main() {
 		ages = (ages * 100.0 + float64(days))/100.0
 		herds=  append(herds, herd.Labyak[i].Name + " " + fmt.Sprintf("%v", ages) +  " years old")
 
-		tillDateStock = f.GetTotalMilk(int(days), float64(oldInAges))
+		tillDateStock = f.GetTotalMilk(int(days), oldInAges)
 		milkStock += tillDateStock
 
 		tillDateSkinStock = f.GetSkin(int(days), oldInAges)
