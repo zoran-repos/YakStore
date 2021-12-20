@@ -19,7 +19,7 @@
     We upload data with syntax
     -  ./load_data 13 ../herd.xml
 
-2. For checking how 2nd task is resolved - follow next steps
+2. For checking how 2nd task how is it resolved - follow next steps
    -  go mod tidy
    
    In folder endpoints 
