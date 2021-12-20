@@ -33,12 +33,13 @@
      < - here we have diferent response for age-last-shaved for Betty-1 >
 
 3. For 3th task you can test with postman or any other tools - folow next steps
-  -  go mod tidy
+   -  go mod tidy
    
    In folder endpoints 
-   - go run main.go
+   -  go run main.go
 
    Request is POST with body: http://localhost:8080/yak-shop/order/14
+   
    {
     "customer" : "Medvedev",
        "order" : {
