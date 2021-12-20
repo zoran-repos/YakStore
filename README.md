@@ -19,12 +19,13 @@
     We upload data with syntax
     -  ./load_data 13 ../herd.xml
 
-2. For checking how 2nd task is resolved - follow next steps
+2. For checking how 2nd task how is it resolved - follow next steps
    -  go mod tidy
+   
    In folder endpoints 
-      go run main.go
+   - go run main.go
+   
    You can test with postman or any other tools: 
-   - 
    - http://localhost:8080/yak-shop/stock/13
    - http://localhost:8080/yak-shop/stock/14
    - http://localhost:8080/yak-shop/herd/13
