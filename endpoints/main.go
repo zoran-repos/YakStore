@@ -30,5 +30,6 @@ func main() {
 	router := gin.Default()
 	router.GET("/yak-shop/herd/:days", herdsHandler.ListHerdsHandler)
 	router.GET("/yak-shop/stock/:days", herdsHandler.ListStockHandler)
+	router.POST("/yak-shop/order/:days", herdsHandler.OrdersHandler)
 	router.Run()
 }
