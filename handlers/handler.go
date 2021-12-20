@@ -109,19 +109,19 @@ func (handler *HerdsHandler) OrdersHandler(c *gin.Context) {
 		skinStock += tillDateSkinStock
 	}
 
-	if (requestOrder.Order.Milk >= milkStock) && (requestOrder.Order.Skins >= skinStock) {
+	if (requestOrder.Order.Milk > milkStock) && (requestOrder.Order.Skins > skinStock) {
 		var order_result = h.Stock{}
 		c.JSON(http.StatusNotFound, order_result)
 	}
-	if (requestOrder.Order.Milk >= milkStock) && (requestOrder.Order.Skins < skinStock) {
+	if (requestOrder.Order.Milk > milkStock) && (requestOrder.Order.Skins <= skinStock) {
 		var order_result = h.Stock{Skins: requestOrder.Order.Skins}
 		c.JSON(http.StatusPartialContent, order_result)
 	}
-	if (requestOrder.Order.Milk < milkStock) && (requestOrder.Order.Skins < skinStock) {
+	if (requestOrder.Order.Milk <= milkStock) && (requestOrder.Order.Skins <= skinStock) {
 		var order_result = h.Stock{Milk: requestOrder.Order.Milk, Skins: requestOrder.Order.Skins}
 		c.JSON(http.StatusOK, order_result)
 	}
-	if (requestOrder.Order.Milk < milkStock) && (requestOrder.Order.Skins >= skinStock) {
+	if (requestOrder.Order.Milk <= milkStock) && (requestOrder.Order.Skins > skinStock) {
 		var order_result = h.Stock{Milk: requestOrder.Order.Milk}
 		c.JSON(http.StatusPartialContent, order_result)
 	}
