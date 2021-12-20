@@ -1,7 +1,7 @@
 package models
 
 type Herd struct {
-	Name *string  `json:"name"`
-	Age  *float64 `json:"age"`
-	Sex  *string  `json:"sex"`
+	Name string `json:"name"`
+	Age  float64 `json:"age"`
+	Age_Last_Shaved  float64 `json:"age_last-last-shaved"`
 }

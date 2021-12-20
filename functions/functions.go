@@ -29,3 +29,18 @@ func GetSkin(elapsedTime int, oldInAges float64) int {
 	}
 	return skinCount
 }
+
+func GetLastShaved(elapsedTime int, oldInAges float64) int {
+	ageLastShave := int(oldInAges * 100)
+	allowedGapInShave := 8 + float64(ageLastShave)*0.01
+	for day := 1; day < elapsedTime; day++ {
+		currentAgeInDays := int(oldInAges*100 + float64(day))
+		if int(oldInAges)*100+day < 1000 {
+			if (currentAgeInDays - ageLastShave) > int(allowedGapInShave) {
+				ageLastShave = currentAgeInDays
+			}
+
+		}
+	}
+	return ageLastShave
+}
