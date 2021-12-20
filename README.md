@@ -10,5 +10,10 @@
 1.1 For data manipulation we use MongoDb as a document store - this functionality is only for presentation - not for production
     You can install MongoDb https://docs.mongodb.com/manual/installation/ or with docker 
     From mongo(shell) you can run those commands for creation db and collection
-    - use YakStore
-    - db.createCollection("herdCollection")
+    -  use YakStore 
+    -  db.createCollection("herdCollection")
+   
+   In import_data folder tool for loading data is load_data.go
+   We upload data with syntax
+   -  ./load_data 13 ../herd.xml
+
